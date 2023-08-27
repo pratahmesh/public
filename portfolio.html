@@ -23,6 +23,9 @@
         visibility: visible;
         background-image:linear-gradient(to right, #ecadff, #5b9fcc);
       }
+      /* .navbar{
+        display:flex;
+      } */
     }
     .showfull{
       visibility: visible;
@@ -44,8 +47,8 @@
           .left-aling{
             padding-left: 6rem;
           }
-          h4{
-            padding-top: 2rem;
+          .h4top{
+            padding-top: 7rem;
           }
           .fs{
             color: rgb(195, 226, 255);
@@ -55,18 +58,30 @@
           color: rgb(138, 166, 219);  
           font-size: 3rem;
           }
-          p{
+          p {
             color: rgb(195, 226, 255);
             font-size: 1rem;
             max-width: 600px;
                 
+          }
+          .h4{
+            color: rgb(70, 87, 119);
+            text-shadow: rgb(119, 119, 119) 1px 0.1px;
+            font-size: 1.5rem;
+            max-width: 600px;
+            padding-top: 2rem;   
+          }
+          h5{
+            color: rgb(195, 226, 255);
+            font-size: 1.25rem;
+            max-width: 600px;
           }
 @media (max-width: 900px){
   .left-aling{
             padding-left: 2rem;
           }
           h4 {
-            padding-top: 3rem;
+            padding-top: 5rem;
           }
           .fs{ font-size: 37px;}
           .fs2{font-size: 25px;}
@@ -76,8 +91,7 @@
 
 .typing-demo {
   width: 25ch;
-  animation:  typing 3s steps(25) infinite alternate,
-                blink 800ms steps(25) infinite normal;
+  animation: typing 3s steps(25) infinite alternate, blink 800ms infinite alternate; 
   white-space: nowrap;
   overflow: hidden;
   border-right: solid;
@@ -93,6 +107,29 @@
     border-color: transparent
   }
 }
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 10px;
+    margin-block-end: 1px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 14px;
+}
+li{
+  padding-top: 20px;
+}
+.linedemo {
+  width: 2ch;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: solid;
+  color: white;
+}
+.diffcolor{
+  color: rgb(138, 166, 219);
+}
     
    
 
@@ -105,8 +142,8 @@
   
     <main>
     </main>
-    <nav class="navbar back">
-        <div class="container-fluid">
+    <nav class="navbar fixed-top">
+        <div class="container-fluid ">
           <a class="navbar-brand mx-3" href="#"><strong>Portfolio  <span class="fs-6">Website</span></strong></a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -123,13 +160,33 @@
                 
                 
                 <ul class="nav nav-pills flex-column mb-auto">
-                  <li class="nav-item"><a href="#" class="nav-link active" aria-current="page"><svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>Home</a></li>
-                  <li><a href="/Dashboard" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg><!-- Dashboard -->About</a></li>
-                  <li><a href="" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg><!-- Orders -->My Skills</a></li>
-                  <li><a href="/Prodcuts" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg><!-- Products -->Contact</a></li>
+                  <li class="nav-item scrolltop"><a href="#" class="nav-link active" aria-current="page"><svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>Home</a></li>
+                  <li class="scrollbtw"><a href="#" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg><!-- Dashboard -->About</a></li>
+                  <li class="scrolldbtw"><a href="#" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg><!-- Orders -->My Skills</a></li>
+                  <li class="scrollend"><a href="#" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg><!-- Products -->Contact</a></li>
                 </ul>
+<script>
+  function scrolltop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  document.querySelector(".scrolltop").addEventListener("click", scrolltop);
+
+  function scrollbtw() {
+    const middleSection = document.querySelector(".scrollbtwabout"); // Replace with your actual middle section selector
+    const middleSectionOffset = middleSection.offsetTop;
+    window.scrollTo({ top: middleSectionOffset, behavior: 'smooth' });
+  }
+  document.querySelector(".scrollbtw").addEventListener("click", scrollbtw);
+
+  function scrolldbtw() {
+    const skillsSection = document.querySelector(".scrollbtwskills"); // Replace with your actual skills section selector
+    const skillsSectionOffset = skillsSection.offsetTop;
+    window.scrollTo({ top: skillsSectionOffset, behavior: 'smooth' });
+  }
+  document.querySelector(".scrolldbtw").addEventListener("click", scrolldbtw);
+</script>
                 <hr>
-                  <div><img src="/github-icon-1-logo-svgrepo-com.svg" alt="" width="32" height="32" class="rounded-circle me-2"><strong>Prathamesh</strong>
+                  <div><img src="/icons8-github.svg" alt="" width="32" height="32" class="rounded-circle me-2"><strong>Prathamesh</strong>
                   </div>
             </div>
           </div>
@@ -138,65 +195,74 @@
           </div>
             </nav>
 
-
+            <div style="width:40px; background-color:transparent; float: left;">
+              <ul type="none" >
+                  <li><img  src="/icons8-github.svg" width="30px" height="30px" alt=""></li>
+                  <li><img src="/HackerRank_Icon-1000px.png" width="30px" height="30px" alt=""></li>
+                  <li><li class="linedemo"></li></li>
+                  </ul>
+            </div>
             
+
+<!-- home -->
               <div class="left-aling">
-              <h4><code style="color: #6ad5b7"><div class="typing-demo">Hi, my name is</div></code></h4>
+              <h4 class="h4top"><code style="color: #6ad5b7"><div class="typing-demo">Hi, my name is</div></code></h4>
               <h1 class="fs">Prathamesh Jakkula.</h1>
               <h1 class="fs2">Code, Create, Elevate:</h1>
               <h1 class="fs2">From Vision to Reality</h1>
               <hr>
               <p >Welcome to my corner of the web! I'm a dedicated web developer with a passion for crafting exceptional digital experiences. Through lines of code and unwavering determination,<br> I transform ideas into interactive realities. With a focus on user-centric design and seamless functionality, Let's connect the dots between imagination and innovation, one pixel at a time</p>
               </div>
-              
+
+
+<!-- about -->
+
+              <div style="height:140px;"></div>
+<div class="scrollbtwabout"></div>
+              <div class="left-aling">
+                <h2 style="color: rgb(138, 166, 219);font-size: 3rem;">About</h2>
+                <hr style="color:rgb(195, 226, 255);">
+                <h4 class="h4"><code style="color: #6ad5b7"><div class="typing-demo">Hello there!</div></code> <br><strong class="diffcolor">I'm Prathamesh Jakkula,</strong> <br>A student with a <strong class="diffcolor">burning curiosity</strong> and an insatiable appetite for web development. With a strong determination and a knack for <strong class="diffcolor">quick adaptation</strong>, I'm stepping into the captivating realm of coding, ready to make my mark in the digital landscape.</h4>
+            <br>
+                <h4 class="h4"><strong class="diffcolor">🎯 Code, Create, Conquer: My Devotion to the Craft</strong></h4>
+            <br>
+                <h5 style="color: rgb(70, 87, 119);text-shadow: rgb(119, 119, 119) 1px 0.1px;">Coding is more than keystrokes for me; it's a channel for <strong class="diffcolor">innovation and creativity</strong>. With every line of code, I'm not just building websites; I'm building <strong class="diffcolor">opportunities</strong>. My focus is not solely on aesthetics, but also on functionality and user experience. This portfolio is a testament to my mission: to leave an <strong class="diffcolor">indelible mark</strong> in the world of web development.</h5>
+            <br>
+            </div>
+
+
               
 
-      <!-- <div class="My_Skills ">
-      <p><ul type="none" >
-          <li><a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> </li>
-          <li><a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> </li>
-          <li><a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> </li>
-          <li><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> </li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </li>
-          <li><a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> 
+<!-- skills -->
+<div style="height:140px;"></div>
+<div class="scrollbtwskills"></div>
+<div class="left-aling">
+<h2 style="color: rgb(138, 166, 219);font-size: 3rem;">MY Skills</h2>
+    <ul type="none" >
+        <li><a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> 
+        <li><a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> 
+        <li><a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> 
+        <li><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> 
+        <li><a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> 
             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> 
-          <li><a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> </li>
-          <li><a href="https://www.python.org" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </li>
-          <li><a href="https://reactjs.org/" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a></li>
+        <li><a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> 
+        <li><a href="https://www.python.org" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> 
+        <li><a href="https://reactjs.org/" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a>
           </ul>
-        </p>
-      </div> -->
+          </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </body>
 </html>
+<!-- https://www.hackerrank.com/prathamesh_jakk1?hr_r=1 -->
+<!-- Token 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 -->
 
-
-
-<!-- 🚀 Crafting Digital Excellence: Welcome to My Portfolio!
-
-Greetings! I'm thrilled to have you explore my digital domain where code meets creativity and determination fuels innovation. As a passionate web developer, I thrive on turning ideas into interactive digital realities. My journey is a testament to countless lines of code written with unwavering dedication. Each project is a canvas where I paint immersive user experiences, ensuring seamless functionality and pixel-perfect design.
-
-🛠️ Unleashing the Possibilities: Diving into My Work
-
-Take a deep dive into my portfolio where I've distilled my determination into a collection of dynamic projects. From e-commerce platforms that redefine online shopping to sleek personal blogs that transform thoughts into captivating stories, each project showcases my commitment to excellence. The journey from concept to execution is guided by a fervent desire to make a difference in the digital landscape.
-
-🎯 Code, Create, Conquer: My Devotion to the Craft
-
-Coding is more than keystrokes for me; it's a channel for innovation and creativity. With every line of code, I'm not just building websites; I'm building opportunities. My focus is not solely on aesthetics, but also on functionality and user experience. This portfolio is a testament to my mission: to leave an indelible mark in the world of web development.
-
-💡 Beyond Boundaries: Collaboration and Growth
-
-While I'm adept at solo coding expeditions, collaboration is the wind beneath my wings. I thrive in team environments, where ideas meld and morph into extraordinary digital solutions. Through continuous learning and embracing emerging technologies, I ensure that my skills remain finely honed. My determination isn't just about completing projects; it's about constantly pushing the boundaries of what's possible.
-
-🌟 Join Me on this Exciting Journey!
-
-Thank you for stopping by and delving into my world of pixels, passion, and perseverance. Whether you're a fellow developer, a potential collaborator, or just someone who appreciates the art of code, I invite you to connect with me. Let's embark on a shared journey of innovation, where every click, every scroll, and every interaction tells a story of determination. Together, we can shape the digital future --> 
