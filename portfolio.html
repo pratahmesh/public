@@ -9,7 +9,7 @@
     .navbar-toggler .navbar-toggler-icon {
       visibility: hidden;
     }
-    @media (max-width: 900px) { 
+    @media (max-width: 945px) { 
     .navbar-toggler .navbar-toggler-icon{
         
         visibility:visible;
@@ -18,7 +18,7 @@
     .container-fluid{
       visibility: hidden;
     }
-    @media (max-width: 900px){
+    @media (max-width: 945px){
       .container-fluid{
         visibility: visible;
         background-image:linear-gradient(to right, #ecadff, #5b9fcc);
@@ -30,7 +30,7 @@
     .showfull{
       visibility: visible;
     }
-    @media (max-width: 900px){
+    @media (max-width: 945px){
       .showfull{
         visibility: inherit;
       }
@@ -76,9 +76,10 @@
             font-size: 1.25rem;
             max-width: 600px;
           }
-@media (max-width: 900px){
+@media (max-width: 945px){
   .left-aling{
             padding-left: 2rem;
+            padding-right: 2rem;
           }
           h4 {
             padding-top: 5rem;
@@ -130,7 +131,17 @@ li{
 .diffcolor{
   color: rgb(138, 166, 219);
 }
-    
+h5{
+  color: rgb(70, 87, 119);text-shadow: rgb(119, 119, 119) 1px 0.1px;
+}
+.space{
+  height: 100px;
+}
+@media (max-width: 945px){
+  .space{
+    height: 210px;
+  }
+}
    
 
 </style>
@@ -160,16 +171,26 @@ li{
                 
                 
                 <ul class="nav nav-pills flex-column mb-auto">
-                  <li class="nav-item scrolltop"><a href="#" class="nav-link active" aria-current="page"><svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>Home</a></li>
+                  <li class="nav-item scrolltop"><a href="#" class="nav-link text-white active "  aria-current="page"><svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>Home</a></li>
                   <li class="scrollbtw"><a href="#" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg><!-- Dashboard -->About</a></li>
                   <li class="scrolldbtw"><a href="#" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg><!-- Orders -->My Skills</a></li>
                   <li class="scrollend"><a href="#" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg><!-- Products -->Contact</a></li>
                 </ul>
 <script>
+   const navLinks = document.querySelectorAll('.nav-link');
   
-  
-  
-  
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      
+      // Remove 'active' class from all links
+      navLinks.forEach(link => link.classList.remove('active'));
+      
+      // Add 'active' class to the clicked link
+      link.classList.add('active');
+    });
+  });
+
   function scrolltop(event) {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -207,13 +228,14 @@ li{
           </div>
             </nav>
 
-            <div style="width:40px; background-color:transparent; float: left;">
+            <!-- <div style="width:40px; background-color:transparent; float: left;">
               <ul type="none" >
-                  <li><img  src="/icons8-github.svg" width="30px" height="30px" alt=""></li>
-                  <li><img src="/HackerRank_Icon-1000px.png" width="30px" height="30px" alt=""></li>
+                  <li><a href="https://github.com/pratahmesh"><img  src="/icons8-github.svg" width="30px" height="30px" alt=""></a></li>
+                  <li><a href="https://www.hackerrank.com/prathamesh_jakk1?hr_r=1"><img src="/HackerRank_Icon-1000px.png" width="30px" height="30px" alt=""></a></li>
+                  <li><a href="https://www.instagram.com/prathamesh_01110/"><img src="/icons8-instagram.svg" width="30px" height="30px" alt=""></a></li>
                   <li><li class="linedemo"></li></li>
                   </ul>
-            </div>
+            </div> -->
             
 
 <!-- home -->
@@ -229,17 +251,19 @@ li{
 
 <!-- about -->
 
-              <div style="height:140px;"></div>
+              <div class="space" ></div>
+              <div class="scrollbtwabout"></div>
+              <div style="height:40px;"></div>
 
-<div class="scrollbtwabout"></div>
+
               <div class="left-aling">
                 <h2 style="color: rgb(138, 166, 219);font-size: 3rem;">About</h2>
                 <hr style="color:rgb(195, 226, 255);">
-                <h4 class="h4"><code style="color: #6ad5b7"><div class="typing-demo">Hello there!</div></code> <br><strong class="diffcolor">I'm Prathamesh Jakkula,</strong> <br>A student with a <strong class="diffcolor">burning curiosity</strong> and an insatiable appetite for web development. With a strong determination and a knack for <strong class="diffcolor">quick adaptation</strong>, I'm stepping into the captivating realm of coding, ready to make my mark in the digital landscape.</h4>
+                <h4 class="h4"><code style="color: #6ad5b7"><div class="typing-demo">Hello there!</div></code> <br><strong class="diffcolor">I'm Prathamesh Jakkula,</strong> an 18-year-old <br>student with a <strong class="diffcolor">burning curiosity</strong> and an insatiable appetite for web development. With a strong determination and a knack for <strong class="diffcolor">quick adaptation</strong>, I'm stepping into the captivating realm of coding, ready to make my mark in the digital landscape.</h4>
             <br>
                 <h4 class="h4"><strong class="diffcolor">🎯 Code, Create, Conquer: My Devotion to the Craft</strong></h4>
             <br>
-                <h5 style="color: rgb(70, 87, 119);text-shadow: rgb(119, 119, 119) 1px 0.1px;">Coding is more than keystrokes for me; it's a channel for <strong class="diffcolor">innovation and creativity</strong>. With every line of code, I'm not just building websites; I'm building <strong class="diffcolor">opportunities</strong>. My focus is not solely on aesthetics, but also on functionality and user experience. This portfolio is a testament to my mission: to leave an <strong class="diffcolor">indelible mark</strong> in the world of web development.</h5>
+                <h5 >Coding is more than keystrokes for me; it's a channel for <strong class="diffcolor">innovation and creativity</strong>. With every line of code, I'm not just building websites; I'm building <strong class="diffcolor">opportunities</strong>. My focus is not solely on aesthetics, but also on functionality and user experience. This portfolio is a testament to my mission: to leave an <strong class="diffcolor">indelible mark</strong> in the world of web development.</h5>
             <br>
             </div>
 
@@ -247,51 +271,72 @@ li{
               
 
 <!-- skills -->
-<div style="height:140px;"></div>
+<div class="space" ></div>
 <div class="scrollbtwskills"></div>
+<div style="height:40px;"></div>
 <div class="left-aling">
 <h2 style="color: rgb(138, 166, 219);font-size: 3rem;">MY Skills</h2>
-    <ul type="none" >
-        <li><a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> 
-        <li><a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> 
-        <li><a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> 
-        <li><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> 
-        <li><a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> 
-        <li><a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> 
-        <li><a href="https://www.python.org" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> 
-        <li><a href="https://reactjs.org/" target="_blank" rel="noreferrer"> 
-            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a>
-          </ul>
+<hr style="color:rgb(195, 226, 255);">
+      <h4 class="h4"><strong class="diffcolor">🎨 Front-End Creativity</strong></h4>
+      <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
+        <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> 
+          <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a>
+            <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> 
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a>
+<h5>HTML & CSS with Bootstrap: Proficient in crafting <strong class="diffcolor">visually appealing front-end interfaces</strong> purely using HTML and CSS, with a flair for enhancing design with Bootstrap components.
+<br>My expertise in React allows me to construct seamless <strong class="diffcolor">single page applications</strong> that provide a fluid user experience.</h5>
+
+<h4 class="h4"><strong class="diffcolor">🧩 Programming Proficiency</strong></h4>
+<li><a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> 
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a>
+<h5>C++ for Data Structures: A solid foundation in C++ helps me tackle complex data structures and algorithms, ensuring <strong class="diffcolor">efficient solutions</strong> to computational challenges.</h5>
+<br>
+<h4 class="h4"><strong class="diffcolor">🐍 Exploring Python</strong></h4>
+<a href="https://www.python.org" target="_blank" rel="noreferrer"> 
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> 
+<h5>Basics of Python: Though still in the early stages, my growing knowledge of Python hints at the <strong class="diffcolor">potential to explore</strong> a new realm of programming possibilities.</h5>
+<br>
+<h4 class="h4"><strong class="diffcolor">🌐 Full Stack 🔗 Bridging Frontend and Backend</strong></h4>
+<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> 
+  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a>
+    <a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> 
+        <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> 
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> 
+<h5>
+Learning Backend Development: While my journey in <strong class="diffcolor">backend development is ongoing</strong>, I'm excited to bridge the gap between frontend and backend to create cohesive web ecosystems. <br>
+<strong class="diffcolor">MERN Stack</strong>: (MongoDB, Express.js, React.js, Node.js) stack, I'm adept at developing <strong class="diffcolor">dynamic web applications</strong> from start to finish.</h5>
           </div>
 
 
 
 <!-- contact -->
-<div style="height:140px;"></div>
+<div class="space" ></div>
 <div class="scrollcontact"></div>
+<div style="height:40px;"></div>
 <div class="left-aling">
 <h2 style="color: rgb(138, 166, 219);font-size: 3rem;">Contact</h2>
 <hr style="color:rgb(195, 226, 255);">
 <h4 class="h4"><strong class="diffcolor">📞 Let's Connect!</strong></h4>
 <br>
-<h5 style="color: rgb(70, 87, 119);text-shadow: rgb(119, 119, 119) 1px 0.1px;">I'm always open to new opportunities and collaborations. If you're interested in working together, feel free to reach out to me via email or LinkedIn. I look forward to hearing from you!</h5>
+<h5 >I'm always open to new <strong class="diffcolor">opportunities and collaborations</strong>. If you're interested in <strong class="diffcolor">working together</strong>, feel free to reach out to me via email or Phone. I look forward to hearing from you!</h5>
 <br>
 <h4 class="h4"><strong class="diffcolor">📧 Email</strong></h4>
 <br>
-<h5 style="color: rgb(70, 87, 119);text-shadow: rgb(119, 119, 119) 1px 0.1px;"></h5>
+<h5>prathameshjakkula680@gmail.com</h5>
+<br>
+<h4 class="h4"><strong class="diffcolor">📞 Phone</strong></h4>
+<br>
+<h5>+91 9322869509</h5>
 <br>
 <h4 class="h4"><strong class="diffcolor">🔗 LinkedIn</strong></h4>
 <br>
-<h5 style="color: rgb(70, 87, 119);text-shadow: rgb(119, 119, 119) 1px 0.1px;"></h5>
+<h5>will be updated</h5>
 <br>
 
 </div>
