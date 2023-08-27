@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      
+    .navbar-toggler .navbar-toggler-icon {
+      visibility: hidden;
+    }
+    @media (max-width: 900px) { 
+    .navbar-toggler .navbar-toggler-icon{
+        
+        visibility:visible;
+      }
+    }
+    .container-fluid{
+      visibility: hidden;
+    }
+    @media (max-width: 900px){
+      .container-fluid{
+        visibility: visible;
+        background-image:linear-gradient(to right, #ecadff, #5b9fcc);
+      }
+    }
+    .showfull{
+      visibility: visible;
+    }
+    @media (max-width: 900px){
+      .showfull{
+        visibility: inherit;
+      }
+    }
+.navbar{
+  padding: 2px;
+}
+.nav-pills {
+    --bs-nav-pills-border-radius: var(--bs-border-radius);
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-pills-link-active-bg: #506d99;
+}
+
+          .left-aling{
+            padding-left: 6rem;
+          }
+          h4{
+            padding-top: 2rem;
+          }
+          .fs{
+            color: rgb(195, 226, 255);
+            font-size: 4rem;
+          }
+          .fs2{
+          color: rgb(138, 166, 219);  
+          font-size: 3rem;
+          }
+          p{
+            color: rgb(195, 226, 255);
+            font-size: 1rem;
+            max-width: 600px;
+                
+          }
+@media (max-width: 900px){
+  .left-aling{
+            padding-left: 2rem;
+          }
+          h4 {
+            padding-top: 3rem;
+          }
+          .fs{ font-size: 37px;}
+          .fs2{font-size: 25px;}
+    }
+
+
+
+.typing-demo {
+  width: 25ch;
+  animation:  typing 3s steps(25) infinite alternate,
+                blink 800ms steps(25) infinite normal;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: solid;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+    
+   
+
+</style>
+  </head>
+    <title>Document</title>
+</head>
+<body style="background-image:linear-gradient(to right, #0b2d42, #0c1b49);">
+<!-- <body style="background-color: #0d3147;"> -->
+  
+    <main>
+    </main>
+    <nav class="navbar back">
+        <div class="container-fluid">
+          <a class="navbar-brand mx-3" href="#"><strong>Portfolio  <span class="fs-6">Website</span></strong></a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+          <div class="offcanvas end-0" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="showfull" >
+            <div class="d-flex flex-column  p-3 text-white " style="width:250px; height: 100vh; background-image:linear-gradient(to left, #101025, #5b9fcc);">
+                <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                  <strong><span class="fs-4">Portfolio <span class="fs-6">Website</span></strong>
+                  <!-- <p> by Prathamesh</p> -->
+                </a>
+                <hr>
+                
+                
+                <ul class="nav nav-pills flex-column mb-auto">
+                  <li class="nav-item"><a href="#" class="nav-link active" aria-current="page"><svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>Home</a></li>
+                  <li><a href="/Dashboard" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg><!-- Dashboard -->About</a></li>
+                  <li><a href="" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg><!-- Orders -->My Skills</a></li>
+                  <li><a href="/Prodcuts" class="nav-link text-white"><svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg><!-- Products -->Contact</a></li>
+                </ul>
+                <hr>
+                  <div><img src="/github-icon-1-logo-svgrepo-com.svg" alt="" width="32" height="32" class="rounded-circle me-2"><strong>Prathamesh</strong>
+                  </div>
+            </div>
+          </div>
+        </div>
+            </div>
+          </div>
+            </nav>
+
+
+            
+              <div class="left-aling">
+              <h4><code style="color: #6ad5b7"><div class="typing-demo">Hi, my name is</div></code></h4>
+              <h1 class="fs">Prathamesh Jakkula.</h1>
+              <h1 class="fs2">Code, Create, Elevate:</h1>
+              <h1 class="fs2">From Vision to Reality</h1>
+              <hr>
+              <p >Welcome to my corner of the web! I'm a dedicated web developer with a passion for crafting exceptional digital experiences. Through lines of code and unwavering determination,<br> I transform ideas into interactive realities. With a focus on user-centric design and seamless functionality, Let's connect the dots between imagination and innovation, one pixel at a time</p>
+              </div>
+              
+              
+
+      <!-- <div class="My_Skills ">
+      <p><ul type="none" >
+          <li><a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> </li>
+          <li><a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> </li>
+          <li><a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> </li>
+          <li><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> </li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </li>
+          <li><a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> 
+          <li><a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> </li>
+          <li><a href="https://www.python.org" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </li>
+          <li><a href="https://reactjs.org/" target="_blank" rel="noreferrer"> 
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a></li>
+          </ul>
+        </p>
+      </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+<!-- 🚀 Crafting Digital Excellence: Welcome to My Portfolio!
+
+Greetings! I'm thrilled to have you explore my digital domain where code meets creativity and determination fuels innovation. As a passionate web developer, I thrive on turning ideas into interactive digital realities. My journey is a testament to countless lines of code written with unwavering dedication. Each project is a canvas where I paint immersive user experiences, ensuring seamless functionality and pixel-perfect design.
+
+🛠️ Unleashing the Possibilities: Diving into My Work
+
+Take a deep dive into my portfolio where I've distilled my determination into a collection of dynamic projects. From e-commerce platforms that redefine online shopping to sleek personal blogs that transform thoughts into captivating stories, each project showcases my commitment to excellence. The journey from concept to execution is guided by a fervent desire to make a difference in the digital landscape.
+
+🎯 Code, Create, Conquer: My Devotion to the Craft
+
+Coding is more than keystrokes for me; it's a channel for innovation and creativity. With every line of code, I'm not just building websites; I'm building opportunities. My focus is not solely on aesthetics, but also on functionality and user experience. This portfolio is a testament to my mission: to leave an indelible mark in the world of web development.
+
+💡 Beyond Boundaries: Collaboration and Growth
+
+While I'm adept at solo coding expeditions, collaboration is the wind beneath my wings. I thrive in team environments, where ideas meld and morph into extraordinary digital solutions. Through continuous learning and embracing emerging technologies, I ensure that my skills remain finely honed. My determination isn't just about completing projects; it's about constantly pushing the boundaries of what's possible.
+
+🌟 Join Me on this Exciting Journey!
+
+Thank you for stopping by and delving into my world of pixels, passion, and perseverance. Whether you're a fellow developer, a potential collaborator, or just someone who appreciates the art of code, I invite you to connect with me. Let's embark on a shared journey of innovation, where every click, every scroll, and every interaction tells a story of determination. Together, we can shape the digital future --> 
